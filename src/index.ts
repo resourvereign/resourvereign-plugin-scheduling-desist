@@ -35,8 +35,8 @@ const initialize = async ({ relativeTimeFromIntent }: DesistData, logger: Logger
 
       const limit = adjust(context.intent.date, relativeTimeFromIntent);
       if (context.date > limit) {
-        context.date = undefined;
         logger.debug(`Candidate date ${context.date} is after limit ${limit}, cancelling`);
+        context.date = undefined;
       } else {
         logger.debug(`Candidate date ${context.date} is before limit: ${limit}, nothing to do`);
       }
