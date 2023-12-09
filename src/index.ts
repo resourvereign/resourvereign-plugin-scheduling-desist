@@ -10,6 +10,11 @@ const schema: PluginSchema = {
   properties: {
     relativeTimeFromIntent: {
       type: 'string',
+      metadata: {
+        name: 'Stop if not completed by',
+        description:
+          'Compact relative time modifier to apply to the intent date. Any attempt scheduled after this date, will be ignored.',
+      },
     },
   },
 };
