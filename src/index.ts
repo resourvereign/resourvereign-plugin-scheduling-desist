@@ -52,5 +52,6 @@ const initialize = async ({ relativeTimeFromIntent }: DesistData, logger: Logger
 
 export default {
   schema,
-  initialize,
+  register: () => initialize,
+  unregister: () => {},
 } satisfies SchedulingPlugin<DesistData>;
